@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#navbar {
+  font-size: 1.3em;
+  color: #777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  background-color: #ddd;
+  border-bottom: #bbb solid 1px;
+  margin-bottom: 45px;
+}
+
+.location {
+  height: 40px;
+  font-size: 1em;
+}
+
+input.location {
+  width: 200px;
+  padding: 0px 5px;
+}
+
+button.location {
+  padding: 0px 10px;
+  color: white;
+  background-color: rgb(70, 110, 220);
+}
