@@ -32,6 +32,12 @@ main {
   font-size: 1em;
 }
 
+#select-location p {
+  background-color: rgb(220, 110, 110);
+  padding: 7px;
+  margin: 8px 0px;
+}
+
 input.location-form {
   width: 200px;
   padding: 0px 5px;

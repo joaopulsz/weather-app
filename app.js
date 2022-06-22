@@ -12,25 +12,34 @@ form.addEventListener('submit', async (e) => {
   const res = await fetch('https://weatherdbi.herokuapp.com/data/weather/' + userInput);
   const weatherData = await res.json();
 
-  console.log(weatherData);
+  if (weatherData.status === 'fail') {
+    const errorMsg = document.createElement('p');
+    errorMsg.innerText = 'Please, enter a valid location!';
+    form.appendChild(errorMsg);
+  } else {
+    if (document.querySelector('#select-location p')) {
+      const errorMsg = document.querySelector('#select-location p');
+      errorMsg.remove();
+    }
 
-  const title = document.createElement('p');
-  title.innerText = weatherData.region;
-  title.setAttribute('id', 'title');
-  const condition = document.createElement('p');
-  condition.innerText = 'Weather condition: ' + weatherData.currentConditions.comment;
-  const temperature = document.createElement('p');
-  temperature.innerText = 'Temperature: ' + weatherData.currentConditions.temp.c + ' °C';
-  const icon = document.createElement('img');
-  icon.setAttribute('src', weatherData.currentConditions.iconURL);
-  const precipitation = document.createElement('p');
-  precipitation.innerText = 'Precipitation: ' + weatherData.currentConditions.precip;
+    const title = document.createElement('p');
+    title.innerText = weatherData.region;
+    title.setAttribute('id', 'title');
+    const condition = document.createElement('p');
+    condition.innerText = 'Weather condition: ' + weatherData.currentConditions.comment;
+    const temperature = document.createElement('p');
+    temperature.innerText = 'Temperature: ' + weatherData.currentConditions.temp.c + ' °C';
+    const icon = document.createElement('img');
+    icon.setAttribute('src', weatherData.currentConditions.iconURL);
+    const precipitation = document.createElement('p');
+    precipitation.innerText = 'Precipitation: ' + weatherData.currentConditions.precip;
 
-  newLocation.appendChild(title);
-  newLocation.append(icon);
-  newLocation.appendChild(condition);
-  newLocation.appendChild(temperature);
-  newLocation.appendChild(precipitation);
+    newLocation.appendChild(title);
+    newLocation.append(icon);
+    newLocation.appendChild(condition);
+    newLocation.appendChild(temperature);
+    newLocation.appendChild(precipitation);
 
-  main.appendChild(newLocation);
+    main.appendChild(newLocation);
+  }
 });
