@@ -21,18 +21,45 @@ body {
   margin-bottom: 45px;
 }
 
-.location {
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.location-form {
   height: 40px;
   font-size: 1em;
 }
 
-input.location {
+input.location-form {
   width: 200px;
   padding: 0px 5px;
 }
 
-button.location {
+#add-location {
   padding: 0px 10px;
   color: white;
   background-color: rgb(70, 110, 220);
+}
+
+footer {
+  font-size: .8em;
+  margin-top: 50px;
+}
+
+.location {
+  width: 450px;
+  height: 200px;
+  border: #bbb solid 2px;
+  margin: 10px;
+}
+
+div.location p {
+  margin: 8px 0px;
+}
+
+#title {
+  font-size: 1.1em;
+  font-weight: 600;
 }

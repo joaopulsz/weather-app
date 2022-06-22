@@ -12,17 +12,20 @@
 <body>
   <header>
     <nav id="navbar">
-      <h1>Weather Watchlist</h1>
+      <h1>My Weather Watchlist</h1>
     </nav>
   </header>
 
   <main>
-    <form id="select-location" action="index.html" method="post">
-      <input class="location" type="text" name="" value="" placeholder="Location Name">
-      <button class="location" type="button" name="button">Add Location</button>
+    <form id="select-location">
+      <input id="location-input" class="location-form" type="text" name="input" placeholder="Location Name">
+      <button id="add-location" class="location-form" type="submit">Add Location</button>
     </form>
-
   </main>
+
+  <footer>
+    <p>Weather data provided by <a href="https://weatherdbi.herokuapp.com/">WeatherDB</a></p>
+  </footer>
 
   <script src="app.js"></script>
 </body>
