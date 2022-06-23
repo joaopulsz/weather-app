@@ -56,7 +56,7 @@ footer {
 
 .location {
   width: 450px;
-  height: 200px;
+  height: 220px;
   border: #bbb solid 2px;
   margin: 10px;
 }
@@ -65,7 +65,17 @@ div.location p {
   margin: 8px 0px;
 }
 
+div.location button {
+  width: 20px;
+  position: absolute;
+  margin-left: 195px;
+  margin-top: 5px;
+  border-radius: 50%;
+}
+
 #title {
+  width: 380px;
   font-size: 1.1em;
   font-weight: 600;
+  margin-left: 35px;
 }

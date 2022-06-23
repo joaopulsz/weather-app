@@ -34,8 +34,15 @@ form.addEventListener('submit', async (e) => {
     const precipitation = document.createElement('p');
     precipitation.innerText = 'Precipitation: ' + weatherData.currentConditions.precip;
 
+    const closeBtn = document.createElement('button');
+    closeBtn.innerText = 'x';
+    newLocation.appendChild(closeBtn);
+    closeBtn.addEventListener('click', () => {
+      newLocation.remove();
+    });
+
     newLocation.appendChild(title);
-    newLocation.append(icon);
+    newLocation.appendChild(icon);
     newLocation.appendChild(condition);
     newLocation.appendChild(temperature);
     newLocation.appendChild(precipitation);
