@@ -10,7 +10,7 @@ body {
 }
 
 #navbar {
-  font-size: 1.3em;
+  font-size: 1.3rem;
   color: #777;
   display: flex;
   align-items: center;
@@ -50,7 +50,7 @@ input.location-form {
 }
 
 footer {
-  font-size: .8em;
+  font-size: .8rem;
   margin-top: 50px;
 }
 
@@ -75,6 +75,7 @@ div.location button {
 
 #title {
   width: 380px;
+  /* todo: try adding rem instead and see if ui changes */
   font-size: 1.1em;
   font-weight: 600;
   margin-left: 35px;
