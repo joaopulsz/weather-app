@@ -9,7 +9,8 @@ form.addEventListener('submit', async (e) => {
 
   const userInput = form.elements.input.value;
 
-  const getWeatherData = await fetch(`https://weatherdbi.herokuapp.com/data/weather/${userInput}`).json();
+  const res = await fetch(`https://weatherdbi.herokuapp.com/data/weather/${userInput}`);
+  const getWeatherData = await res.json();
 
   if (getWeatherData.status === 'fail' && !document.querySelector('#select-location p')) {
     const errorMsg = document.createElement('p');
